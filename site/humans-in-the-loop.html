@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3. Humans in the Loop — Asdale Dynamics, LLC</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Keeping Humans in the Loop</h1>
+  <p class="tagline">Chapter 3 of the AI Workflow Basics Guide — review checkpoints and human judgment.</p>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="choosing-tools.html">1. Choosing tools</a>
+  <a href="chaining-prompts.html">2. Chaining prompts</a>
+  <a href="humans-in-the-loop.html" class="active">3. Humans in the loop</a>
+  <a href="planner.html">Printable planner</a>
+  <a href="tools/prompt-chain.html">Prompt chain tool</a>
+</nav>
+<main>
+  <p>AI is fast, confident, and sometimes wrong. Keeping a human in the loop means a
+  person reviews, approves, or changes AI output before it is used for anything real.
+  The AI does the draft work. The human makes the final call.</p>
+  <p>You do not need to review everything. You need to review the things that matter.</p>
+
+  <h2>When human review matters most</h2>
+  <p>Review AI output when any of these are true:</p>
+  <ul>
+    <li>It goes to other people. (Email, newsletter, social media, a letter.)</li>
+    <li>It involves money. (Invoice, budget, reimbursement, pricing.)</li>
+    <li>It involves health. (AI can explain general health topics for education.
+    It must never give medical advice, diagnose, or suggest treatment. A human
+    professional must always review anything health-related.)</li>
+    <li>It is a legal or official document. (Contract, form, filing.)</li>
+    <li>It is about a real person. (Names, addresses, personal details.)</li>
+    <li>You would be embarrassed if it were wrong.</li>
+  </ul>
+  <p>For low-stakes things — brainstorming names, exploring an idea, drafting a
+  joke — you can skip formal review and just read it yourself.</p>
+
+  <h2>The review checkpoint workflow</h2>
+  <p>Add a human check between steps of your prompt chain.</p>
+  <pre>Step 1: AI drafts
+      ↓
+Human check: read, fix, approve (or rewrite)
+      ↓
+Step 2: AI continues from the approved draft
+      ↓
+Human check: final read before sharing
+      ↓
+Done</pre>
+  <p>If the check fails, send the step back with notes. Do not let errors flow into
+  the next step.</p>
+
+  <h2>Step-by-step: how to review AI output</h2>
+  <ol>
+    <li><strong>Read it out loud.</strong> Your ear catches things your eye skips.</li>
+    <li><strong>Check the facts.</strong> Names, dates, numbers, prices, addresses. AI makes
+    these up more often than you think.</li>
+    <li><strong>Check the tone.</strong> Does it sound like you? Would you say this to a friend?</li>
+    <li><strong>Check for medical content.</strong> If it mentions health, symptoms, or treatment,
+    it needs review by a qualified professional. AI output here is education only.</li>
+    <li><strong>Mark it.</strong> Write "approved," "edited," or "needs redo" and the date.</li>
+  </ol>
+  <p>Keep a simple log if you are doing this for work:</p>
+  <table>
+    <thead>
+      <tr><th>Date</th><th>Task</th><th>AI step</th><th>Reviewer</th><th>Result</th></tr>
+    </thead>
+    <tbody>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>What to never let AI do alone</h2>
+  <p>Never let AI publish or send the following without a human reading every word:</p>
+  <ul>
+    <li>Anything with someone else's personal data</li>
+    <li>Anything about health, medication, or symptoms (education only, never advice)</li>
+    <li>Bills, invoices, or financial records</li>
+    <li>Anything going to a client, customer, or patient</li>
+    <li>Anything posted under your name or your business's name</li>
+  </ul>
+
+  <div class="callout">
+    <strong>A simple human-in-the-loop rule.</strong><br>
+    If you would not sign your name to it without reading it, do not let AI
+    send it without reading it.
+  </div>
+
+  <h2>Next step</h2>
+  <p>Use the printable planner in this guide to map out where your human checkpoints
+  go before you start your first real chain.</p>
+  <a href="planner.html" class="btn">Open printable planner</a>
+
+  <div class="credit">
+    <p>Written and published by <strong>Asdale Dynamics, LLC</strong> (Dylan Asdale, registered nurse). Indiana, formed October 2026.</p>
+    <p>Education only — never medical advice.</p>
+    <p>Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</main>
+</body>
+</html>

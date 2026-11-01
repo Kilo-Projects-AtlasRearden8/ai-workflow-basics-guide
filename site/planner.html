@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Printable AI Workflow Planner — Asdale Dynamics, LLC</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  @media print {
+    body { background: #ffffff; max-width: none; margin: 0; padding: 0; font-size: 10pt; }
+    header, nav, .no-print { display: none !important; }
+    main { border: none; box-shadow: none; padding: 0; }
+    a { color: #111827; text-decoration: none; }
+    .break { page-break-before: always; }
+    table, .step-card, .callout { page-break-inside: avoid; }
+    h2, h3 { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<header class="no-print">
+  <h1>Printable AI Workflow Planner</h1>
+  <p class="tagline">One page, one workflow. Print this page (Ctrl+P / Cmd+P) and fill it in by hand.</p>
+</header>
+<nav class="no-print">
+  <a href="index.html">Home</a>
+  <a href="choosing-tools.html">1. Choosing tools</a>
+  <a href="chaining-prompts.html">2. Chaining prompts</a>
+  <a href="humans-in-the-loop.html">3. Humans in the loop</a>
+  <a href="planner.html" class="active">Printable planner</a>
+  <a href="tools/prompt-chain.html">Prompt chain tool</a>
+</nav>
+<main>
+  <p class="small no-print">Print this page (Ctrl+P / Cmd+P) and fill it in by hand before you start your first AI workflow.</p>
+
+  <h2>My AI Workflow Plan</h2>
+  <div class="row">
+    <div style="flex:1 1 200px"><label>Date</label><input type="text" placeholder="e.g. Nov 1, 2026"></div>
+    <div style="flex:1 1 300px"><label>Workflow name</label><input type="text" placeholder="e.g. Monthly newsletter"></div>
+  </div>
+  <label>What am I trying to do? (one real task)</label>
+  <textarea rows="3" placeholder="e.g. Write a newsletter about the community garden fair"></textarea>
+
+  <label>Which tool will I use?</label>
+  <div style="margin:0.5rem 0">
+    <label style="display:inline;margin-right:1rem"><input type="checkbox"> Cloud AI chatbot (free tier)</label>
+    <label style="display:inline;margin-right:1rem"><input type="checkbox"> Local LLM (Ollama / LM Studio)</label>
+    <label style="display:inline;margin-right:1rem"><input type="checkbox"> AI coding assistant</label>
+    <label style="display:inline"><input type="checkbox"> Other: <input type="text" style="width:140px"></label>
+  </div>
+  <div class="row" style="margin-top:0.25rem">
+    <div style="flex:1"><label>Do I have access?</label>
+      <label style="display:inline"><input type="radio" name="access" value="yes"> Yes</label>
+      <label style="display:inline;margin-left:0.75rem"><input type="radio" name="access" value="no"> No — get access first</label>
+    </div>
+  </div>
+
+  <h2>My prompt chain (one job per step)</h2>
+  <div class="step-card">
+    <div class="step-head"><span class="step-badge">Step 1</span><label style="margin:0">Step name</label></div>
+    <input type="text" class="step-name" placeholder="e.g. Summarize notes">
+    <label>Prompt</label>
+    <textarea rows="2"></textarea>
+    <label>Input</label>
+    <textarea rows="2"></textarea>
+    <label>Expected output</label>
+    <textarea rows="2"></textarea>
+  </div>
+  <div class="step-card">
+    <div class="step-head"><span class="step-badge">Step 2</span><label style="margin:0">Step name</label></div>
+    <input type="text" class="step-name" placeholder="e.g. Draft newsletter">
+    <label>Prompt</label>
+    <textarea rows="2"></textarea>
+    <label>Input</label>
+    <textarea rows="2" placeholder="(output from Step 1)"></textarea>
+    <label>Expected output</label>
+    <textarea rows="2"></textarea>
+  </div>
+  <div class="step-card">
+    <div class="step-head"><span class="step-badge">Step 3</span><label style="margin:0">Step name</label></div>
+    <input type="text" class="step-name" placeholder="e.g. Final check">
+    <label>Prompt</label>
+    <textarea rows="2"></textarea>
+    <label>Input</label>
+    <textarea rows="2" placeholder="(output from Step 2)"></textarea>
+    <label>Expected output</label>
+    <textarea rows="2"></textarea>
+  </div>
+
+  <h2>Human checkpoints (where a person reviews)</h2>
+  <table>
+    <thead>
+      <tr><th>Checkpoint</th><th>What I review</th><th>Reviewer</th><th>Approved? (Y/N)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>After Step 1</td><td></td><td></td><td></td></tr>
+      <tr><td>After Step 2</td><td></td><td></td><td></td></tr>
+      <tr><td>Before sharing</td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Risks and reminders</h2>
+  <div class="row">
+    <div style="flex:1"><label style="display:block"><input type="checkbox"> Does this involve money? — double-check all numbers</label></div>
+    <div style="flex:1"><label style="display:block"><input type="checkbox"> Does this involve health? — education only, never medical advice; a professional must review</label></div>
+    <div style="flex:1"><label style="display:block"><input type="checkbox"> Does this include personal data about real people? — remove names and details first</label></div>
+  </div>
+
+  <label>Next action</label>
+  <textarea rows="2"></textarea>
+
+  <label>Notes</label>
+  <textarea rows="3"></textarea>
+
+  <div class="credit no-print">
+    <p>Printable planner by <strong>Asdale Dynamics, LLC</strong> (Dylan Asdale). Indiana, formed October 2026.</p>
+    <p>Education only — never medical advice. Local first, no keys.</p>
+    <p>Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2. Chaining Prompts — Asdale Dynamics, LLC</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Chaining Prompts</h1>
+  <p class="tagline">Chapter 2 of the AI Workflow Basics Guide — link AI answers together.</p>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="choosing-tools.html">1. Choosing tools</a>
+  <a href="chaining-prompts.html" class="active">2. Chaining prompts</a>
+  <a href="humans-in-the-loop.html">3. Humans in the loop</a>
+  <a href="planner.html">Printable planner</a>
+  <a href="tools/prompt-chain.html">Prompt chain tool</a>
+</nav>
+<main>
+  <p>A single AI prompt usually gives one answer. Prompt chaining means taking that
+  answer and feeding it into a second prompt, then taking that answer and feeding
+  it into a third, and so on. Each step has one job. Together they do bigger work.</p>
+  <p>Think of it like an assembly line where each station does one thing well.</p>
+
+  <h2>Why chain prompts instead of one big prompt?</h2>
+  <table>
+    <thead>
+      <tr><th>One big prompt</th><th>Chained prompts</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>AI can skip steps or miss details</td><td>Each step has a clear, small job</td></tr>
+      <tr><td>Hard to tell where it went wrong</td><td>You can check each step before moving on</td></tr>
+      <tr><td>Changing one part means rewriting everything</td><td>You can fix one step and keep the rest</td></tr>
+      <tr><td>Good for quick, simple tasks</td><td>Good for writing, research, and planning</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Step 1: Break your task into steps</h2>
+  <p>Pick a task and split it into 2–4 steps. Each step gets its own prompt.</p>
+  <p>Example: writing a newsletter about a local event.</p>
+  <ol>
+    <li><strong>Summarize</strong> the event details into key points.</li>
+    <li><strong>Draft</strong> a friendly newsletter from those points.</li>
+    <li><strong>Rewrite</strong> the subject line to be more catchy.</li>
+    <li><strong>Check</strong> the draft for mistakes or missing info.</li>
+  </ol>
+  <p>Do not try to do all four in one prompt. Give each step its own turn.</p>
+
+  <h2>Step 2: Write the first prompt</h2>
+  <p>Make it specific. Include the input and ask for one clear output.</p>
+  <pre>Here are rough notes from the community garden fair on October 12:
+
+[PASTE YOUR NOTES HERE]
+
+Turn these into 5 short bullet points. Keep the tone friendly and plain.
+Save any dates, times, and locations exactly as written.</pre>
+  <p>Run it. Copy the output. That is the output of step 1.</p>
+
+  <h2>Step 3: Feed the output into the next prompt</h2>
+  <p>Take what step 1 gave you and paste it into step 2's prompt. Mark clearly what
+  is new input and what is instructions.</p>
+  <pre>Using these bullet points from the community garden fair:
+
+[PASTE STEP 1 OUTPUT HERE]
+
+Write a 200-word newsletter in a warm, neighborly tone. Include a short
+introduction, the 5 bullet points, and one sentence inviting people to the
+next fair.</pre>
+  <p>Run it. Copy the output. That is the output of step 2.</p>
+
+  <h2>Step 4: Repeat for each step</h2>
+  <h3>Example prompt 3 (subject lines):</h3>
+  <pre>Here is the newsletter draft:
+
+[PASTE STEP 2 OUTPUT HERE]
+
+Write 3 subject lines. One warm, one curious, one short. Label each one.</pre>
+  <h3>Example prompt 4 (final check):</h3>
+  <pre>Here is the full newsletter draft and the chosen subject line:
+
+[PASTE STEP 2 AND STEP 3 OUTPUT HERE]
+
+Check for: spelling mistakes, missing dates or locations, anything unclear,
+and anything that sounds like medical advice. List problems only. Do not
+rewrite yet.</pre>
+  <p>Fix anything the check finds, then you are done.</p>
+
+  <h2>Step 5: Save the chain</h2>
+  <p>Save your prompts somewhere you can reuse them — a notes app, a text file, or
+  the planner worksheet in this guide. Next time you write a newsletter, you
+  only need to paste in new notes. The chain stays the same.</p>
+
+  <h2>Tips for better chains</h2>
+  <ul>
+    <li><strong>One job per step.</strong> If a step feels too long, split it into two.</li>
+    <li><strong>Name your variables.</strong> Use labels like [STEP 1 OUTPUT] so you never
+    paste the wrong thing into the wrong prompt.</li>
+    <li><strong>Check before continuing.</strong> Read each output before you feed it forward.
+    Garbage in, garbage out.</li>
+    <li><strong>Keep humans in the loop.</strong> See Chapter 3 for when and how to review.</li>
+    <li><strong>Start small.</strong> Two steps is plenty for your first chain.</li>
+  </ul>
+
+  <h2>A printable mini-template</h2>
+  <p>Copy this into your notes and fill it in:</p>
+  <pre>Task: ___________________________________________________
+
+Step 1: ___________________________________________________
+Prompt: ___________________________________________________
+Input: ____________________________________________________
+Expected output: __________________________________________
+
+Step 2: ___________________________________________________
+Prompt: ___________________________________________________
+Input: (output from Step 1)
+Expected output: __________________________________________
+
+Human check after Step ___: ________________________________</pre>
+
+  <h2>Next step</h2>
+  <p>Chains work best when a person checks the work between steps. Chapter 3
+  explains how to keep humans in the loop without slowing yourself down.</p>
+  <a href="humans-in-the-loop.html" class="btn">Go to Chapter 3</a>
+
+  <div class="credit">
+    <p>Written and published by <strong>Asdale Dynamics, LLC</strong> (Dylan Asdale). Indiana, formed October 2026.</p>
+    <p>Education only — never medical advice.</p>
+    <p>Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</main>
+</body>
+</html>

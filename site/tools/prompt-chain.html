@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Chain Tool — Asdale Dynamics, LLC</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+  .tool-note { font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem; }
+  .tool-note strong { color: #111827; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Prompt Chain Tool</h1>
+  <p class="tagline">Local-first prompt chaining sandbox. Nothing leaves your browser. No keys, no accounts.</p>
+</header>
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../choosing-tools.html">1. Choosing tools</a>
+  <a href="../chaining-prompts.html">2. Chaining prompts</a>
+  <a href="../humans-in-the-loop.html">3. Humans in the loop</a>
+  <a href="../planner.html">Printable planner</a>
+  <a href="prompt-chain.html" class="active">Prompt chain tool</a>
+</nav>
+<main>
+  <p class="tool-note"><strong>How it works:</strong> Add steps, write a prompt template for each, and paste the AI's output. Use <code>{{prev}}</code> in a prompt to insert the previous step's output. Export your chain as JSON, or import one you saved earlier. Data stays in your browser only if you turn on "Save in browser."</p>
+
+  <div class="row" style="margin-bottom:1rem">
+    <button type="button" class="btn" id="add-step">+ Add step</button>
+    <button type="button" class="btn secondary" id="export-chain">Export chain (JSON)</button>
+    <input type="file" id="import-file" accept=".json" style="display:none">
+    <button type="button" class="btn secondary" id="import-chain">Import chain (JSON)</button>
+    <button type="button" class="btn danger" id="clear-chain">Clear all</button>
+  </div>
+
+  <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer">
+    <input type="checkbox" id="storage-toggle"> Save in browser (local only)
+  </label>
+  <span class="small" id="storage-status"></span>
+
+  <div id="steps-container"></div>
+
+  <template id="step-template">
+    <div class="step-card">
+      <div class="step-head">
+        <span class="step-badge">Step 1</span>
+        <label style="margin:0;flex:1">Step name</label>
+        <button type="button" class="btn danger btn-sm remove-step" title="Remove this step">Remove</button>
+      </div>
+      <div class="row">
+        <div style="flex:1 1 200px">
+          <label>Step name</label>
+          <input type="text" class="step-name" placeholder="e.g. Summarize notes">
+        </div>
+        <div style="flex:1 1 200px">
+          <label>Variable name</label>
+          <input type="text" class="step-var" value="step1" placeholder="e.g. summary" maxlength="40">
+        </div>
+      </div>
+      <label>Prompt template (use {{prev}} for the previous output)</label>
+      <textarea class="step-prompt" rows="3"></textarea>
+      <label>AI output (paste the AI's answer here)</label>
+      <textarea class="step-output" rows="3"></textarea>
+      <div class="step-actions small">
+        <button type="button" class="btn secondary copy-output">Copy output</button>
+        <button type="button" class="btn secondary carry-forward">Carry forward to next step</button>
+      </div>
+    </div>
+  </template>
+
+  <div class="credit">
+    <p>Prompt chain tool by <strong>Asdale Dynamics, LLC</strong> (Dylan Asdale). Indiana, formed October 2026.</p>
+    <p>Local first, no keys. Education only — never medical advice.</p>
+    <p>Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</main>
+<script src="../script.js"></script>
+</body>
+</html>

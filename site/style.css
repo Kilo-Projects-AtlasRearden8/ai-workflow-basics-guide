@@ -1,0 +1,136 @@
+/* AI Workflow Basics Guide — site styles
+   Asdale Dynamics, LLC. Warm, plain, printable, local first. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  background: #fafafa;
+}
+header {
+  border-bottom: 4px solid #8b5cf6;
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.35rem;
+}
+h1 { font-size: 1.7rem; margin: 0 0 0.35rem 0; color: #4c1d95; }
+.tagline { color: #6b7280; font-size: 1rem; margin: 0; }
+nav {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1.35rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+nav a {
+  color: #4c1d95;
+  text-decoration: none;
+  margin-right: 1.1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+nav a:hover { text-decoration: underline; }
+nav a.active { color: #111827; text-decoration: underline; }
+main {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+h2 { font-size: 1.4rem; margin: 1.6rem 0 0.6rem 0; color: #4c1d95; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.35rem; }
+h2:first-child { margin-top: 0; border: none; padding: 0; }
+h3 { font-size: 1.15rem; color: #374151; margin: 1.3rem 0 0.45rem 0; }
+p { margin: 0.65rem 0; }
+ul, ol { margin: 0.65rem 0 0.85rem 1.6rem; padding: 0; }
+li { margin: 0.35rem 0; }
+a { color: #4c1d95; }
+pre {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.85rem;
+  overflow: auto;
+  font-size: 0.9rem;
+  margin: 0.7rem 0;
+}
+code {
+  background: #f3f4f6;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+}
+table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.95rem; }
+th, td { border: 1px solid #d1d5db; padding: 0.55rem 0.75rem; text-align: left; vertical-align: top; }
+th { background: #f3f4f6; color: #374151; font-weight: 600; }
+tr:nth-child(even) td { background: #fafafa; }
+.callout {
+  border-left: 4px solid #8b5cf6;
+  background: #f5f3ff;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+.callout.warn { border-left-color: #f59e0b; background: #fffbeb; }
+.credit {
+  margin-top: 2.2rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+.credit strong { color: #111827; }
+.btn {
+  background: #4c1d95;
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.btn:hover { background: #3b0893; }
+.btn.secondary { background: #e5e7eb; color: #111827; }
+.btn.secondary:hover { background: #d1d5db; }
+.btn.danger { background: #ef4444; color: #ffffff; }
+.btn.danger:hover { background: #dc2626; }
+.row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0.75rem 0; }
+label { display: block; margin: 0.55rem 0 0.25rem 0; font-weight: 500; font-size: 0.9rem; }
+input[type="text"], input[type="number"], textarea, select {
+  width: 100%;
+  padding: 0.55rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+textarea { min-height: 90px; resize: vertical; }
+.step-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  margin: 0.75rem 0;
+  background: #fafafa;
+}
+.step-card .step-head { display: flex; gap: 0.5rem; align-items: baseline; margin-bottom: 0.6rem; }
+.step-badge { background: #4c1d95; color: #fff; font-size: 0.78rem; padding: 0.12rem 0.5rem; border-radius: 12px; font-weight: 600; }
+.step-actions { margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.small { font-size: 0.85rem; color: #6b7280; }
+.hide { display: none !important; }
+footer-note { font-size: 0.78rem; color: #9ca3af; }
+@media print {
+  body { background: #ffffff; max-width: none; margin: 0; padding: 0; font-size: 10.5pt; }
+  header, nav, .no-print { display: none !important; }
+  main { border: none; box-shadow: none; padding: 0; }
+  a { color: #111827; text-decoration: none; }
+  .break { page-break-before: always; }
+  table, .step-card, .callout { page-break-inside: avoid; }
+  h2, h3 { page-break-after: avoid; }
+}
